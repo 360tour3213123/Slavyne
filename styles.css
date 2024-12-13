@@ -69,12 +69,13 @@ main {
     margin-top: 20px;
 }
 
+/* Новый стиль для подкаталогов "Расселение" */
+#reselling-submenu {
+   margin-top: 10px; /* Отступ сверху для кнопок подкаталогов */
+}
+
 footer {
     text-align: center;
     padding: 10px;
     background-color: #4CAF50;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
