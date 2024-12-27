@@ -14,10 +14,11 @@ header {
 
 .container {
     display: flex;
+    flex-direction: row; /* По умолчанию располагаем элементы в ряд */
 }
 
 .sidebar {
-    width: 200px;
+    width: 200px; /* Ширина бокового меню для десктопов */
     background-color: #f4f4f4;
     padding: 15px;
 }
@@ -35,6 +36,8 @@ header {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    display: block; /* Делаем ссылки блочными элементами для удобства нажатия */
+    padding: 10px; /* Добавляем отступы для удобства */
 }
 
 .sub-menu {
@@ -51,31 +54,46 @@ main {
     display: none;
 }
 
-.popup-btn {
-    margin: 5px;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-.popup-btn:hover {
-    background-color: #45a049;
-}
-
 .content {
     margin-top: 20px;
-}
-
-/* Новый стиль для подкаталогов "Расселение" */
-#reselling-submenu {
-   margin-top: 10px; /* Отступ сверху для кнопок подкаталогов */
 }
 
 footer {
     text-align: center;
     padding: 10px;
     background-color: #4CAF50;
+}
+
+/* Мобильные стили */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Столбик для мобильных */
+    }
+
+    .sidebar {
+        width: 100%; /* Полная ширина для бокового меню на мобильных устройствах */
+    }
+
+    main {
+        padding: 10px; /* Уменьшаем отступы для мобильных */
+    }
+
+    .sidebar ul li {
+        margin: 10px 0; /* Уменьшаем отступы между пунктами меню */
+    }
+
+    .sidebar a {
+        padding: 8px; /* Уменьшаем отступы для мобильных */
+    }
+}
+
+/* Планшетные устройства */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .sidebar {
+        width: 150px; /* Уменьшаем ширину бокового меню для планшетов */
+    }
+
+    main {
+        padding: 15px; /* Увеличиваем отступы для планшетов */
+    }
 }
